@@ -14,3 +14,18 @@ test("Test the player object", () => {
 		expect.arrayContaining([expect.any(Object)])
 	);
 });
+
+test("Check getStats() method ", () => {
+	const player = new Player("Dave");
+	expect(player.getStats()).toHaveProperty("potions");
+	expect(player.getStats()).toHaveProperty("strength");
+	expect(player.getStats()).toHaveProperty("agility");
+	expect(player.getStats()).toHaveProperty("health");
+});
+
+test("Get Inventory from player or return false", () => {
+	const player = new Player("Dave");
+	expect(player.getInventory()).toEqual(expect.any(Array));
+	player.inventory = [];
+	expect(player.getInventory()).toEqual(false);
+});
