@@ -11,7 +11,7 @@ test("Enemy object", () => {
 	expect(enemy.health).toEqual(expect.any(Number));
 	expect(enemy.strength).toEqual(expect.any(Number));
 	expect(enemy.agility).toEqual(expect.any(Number));
-	expect(enemy.potion).toEqual(expect.any(Object));
+	expect(enemy.potions).toEqual(expect.any(Object));
 });
 
 test("gets enemy's health value", () => {
